@@ -1,12 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Navbar from './componts/Navbar'
+import News from './componts/News'
 
-function App() {
-  return (
-    <div>
-    hellow this is new App
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Navbar/>
+        <News/>
+      </div>
+    )
+  }
 }
-
-export default App;
