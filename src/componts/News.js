@@ -91,7 +91,7 @@ export default class news extends Component {
                       ? "https://images.pexels.com/photos/902194/pexels-photo-902194.jpeg?auto=compress&cs=tinysrgb&w=600"
                       : element.urlToImage
                   }
-                  newsUrl={element.url}
+                  newsUrl={element.url} author={element.author=== null? "Unknow":element.author } date={element.publishedAt} source={element.source.name}
                 />
               </div>
             );
