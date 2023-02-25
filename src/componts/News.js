@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
-import Spinner from "./Spinner";
+// import Spinner from "./Spinner";
 import PropTypes from 'prop-types'
 
 
 export default class news extends Component {
   static defaultProps = {
-    country: 'in',
+    country: 'us',
     pageSize: 8,
     category: 'general'
   }
