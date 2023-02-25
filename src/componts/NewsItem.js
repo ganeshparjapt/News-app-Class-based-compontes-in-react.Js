@@ -6,16 +6,16 @@ export class NewsItem extends Component {
     return (
       <div>
         <div className="card">
-          <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left: '90%' ,zIndex : "1"}}>
+          <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left: '90%' ,zIndex : "1"}}>
             {source}
-            <span class="visually-hidden">unread messages</span>
+            <span className="visually-hidden">unread messages</span>
           </span>
           <img src={imgUrl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
             <p className="card-text">{descc}...</p>
             <h6>
-              Example heading <span class="badge bg-secondary">New</span>
+              Example heading <span className="badge bg-secondary">New</span>
             </h6>
 
             <a
@@ -26,7 +26,7 @@ export class NewsItem extends Component {
             >
               Read...
             </a>
-            <div class="card-footer text-muted">
+            <div className="card-footer text-muted">
               Author - {author} Public- {new Date(date).toGMTString()}
             </div>
           </div>
