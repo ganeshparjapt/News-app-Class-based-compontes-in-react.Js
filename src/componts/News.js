@@ -15,14 +15,18 @@ export default class news extends Component {
     pageSize: PropTypes.number,
     category: PropTypes.string,
   };
-  constructor() {
-    super();
+ capitalizeFirstLetter=(string) =>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+  constructor(props) {
+    super(props);
     console.log("i am a news constraecter for news.js");
     this.state = {
       articles: [],
       loading: false,
       page: 1,
     };
+    document.title = `NewsMonkey-${this.capitalizeFirstLetter(this.props.category)}`;
   }
   async updateNews(){
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f8264201c0a04e829cc23fb70753cd26&page=${this.state.page}&pageSize=${this.props.pageSize}`;
@@ -35,7 +39,7 @@ export default class news extends Component {
 
   }
   async componentDidMount() {
-    console.log("did mount");
+    console.log("did mount componet");
     this.updateNews();
 
    
@@ -61,7 +65,7 @@ export default class news extends Component {
     return (
       <div className="container my-3">
         <h1 className="text-center" style={{ margin: "35px" }}>
-          News Monkey Headlings today
+          News Monkey Headlings today From -{this.capitalizeFirstLetter(this.props.category)}
         </h1>
         {/* {<Spinner />} */}
 
